@@ -1,0 +1,73 @@
+<section id="experiencia" class="relative">
+  <!-- Section divider -->
+  <div class="section-divider-line"></div>
+
+  <div class="section-container">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-brand-400 font-mono text-sm font-semibold tracking-wider uppercase mb-3">Trajetória</span>
+      <h2 class="section-title">Experiência <span class="gradient-text">Profissional</span></h2>
+      <p class="section-subtitle mt-3">Minha jornada no desenvolvimento de software</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative max-w-3xl mx-auto">
+      <!-- Timeline Line -->
+      <div class="timeline-line"></div>
+
+      @for (exp of experiences; track exp.company; let i = $index) {
+        <div class="relative pl-12 md:pl-20 pb-16 last:pb-0 group">
+          <!-- Timeline Dot -->
+          <div class="timeline-dot"
+               [class.timeline-dot-active]="exp.isCurrent"
+               [class.timeline-dot-inactive]="!exp.isCurrent"
+          ></div>
+
+          <!-- Card -->
+          <div class="glass-card p-6 md:p-8 experience-card">
+            <!-- Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-white">{{ exp.role }}</h3>
+                <p class="text-brand-400 font-semibold">{{ exp.company }}</p>
+              </div>
+              <div class="flex items-center gap-2">
+                @if (exp.isCurrent) {
+                  <span class="current-badge">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Atual
+                  </span>
+                }
+                <span class="text-surface-500 text-sm font-medium">{{ exp.period }}</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-surface-400 mb-5">{{ exp.description }}</p>
+
+            <!-- Responsibilities -->
+            <ul class="space-y-2 mb-6">
+              @for (item of exp.responsibilities; track item) {
+                <li class="flex items-start gap-3 text-surface-300">
+                  <svg class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>{{ item }}</span>
+                </li>
+              }
+            </ul>
+
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-2">
+              @for (tech of exp.technologies; track tech) {
+                <span class="badge text-xs">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.section-divider-line {
+  @apply absolute top-0 left-0 right-0 h-px;
+  background: linear-gradient(to right, transparent, rgba(51, 65, 85, 0.5), transparent);
+}
+
+.contact-card {
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.05);
+}
+
+.contact-icon-email {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.25);
+}
+
+.contact-icon-location {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center;
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.25);
+}
+
+.cta-send-email {
+  @apply inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300;
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.25);
+}
+
+.cta-send-email:hover {
+  background: linear-gradient(to right, #6366f1, #818cf8);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
+  transform: translateY(-4px);
+}
+
+.footer-container {
+  @apply mt-16;
+  border-top: 1px solid rgba(30, 41, 59, 0.5);
+}
+
+.footer-social-btn {
+  @apply w-10 h-10 rounded-xl bg-surface-800 border border-surface-700 flex items-center justify-center
+         text-surface-400 hover:text-white hover:border-brand-500 transition-all duration-300;
+}
+
+.footer-social-btn:hover {
+  background-color: rgba(30, 27, 75, 0.5);
+}

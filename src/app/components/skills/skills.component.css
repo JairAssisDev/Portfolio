@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.section-divider-line {
+  @apply absolute top-0 left-0 right-0 h-px;
+  background: linear-gradient(to right, transparent, rgba(51, 65, 85, 0.5), transparent);
+}
+
+.skills-bg-orb {
+  @apply absolute rounded-full;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-color: rgba(79, 70, 229, 0.05);
+  filter: blur(48px);
+}
+
+.skill-card {
+  transition: all 0.5s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.05);
+  transform: translateY(-4px);
+}

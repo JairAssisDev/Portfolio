@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.section-divider-line {
+  @apply absolute top-0 left-0 right-0 h-px;
+  background: linear-gradient(to right, transparent, rgba(51, 65, 85, 0.5), transparent);
+}
+
+.project-card {
+  transition: all 0.5s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.05);
+  transform: translateY(-8px);
+}
+
+.project-icon {
+  @apply w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-lg flex-shrink-0;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+.project-institution-badge {
+  @apply inline-block text-xs font-semibold text-brand-400 px-2.5 py-1 rounded-md mb-2;
+  background-color: rgba(30, 27, 75, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.project-accent-line {
+  @apply h-1;
+  opacity: 0.6;
+  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+  transition: opacity 0.5s ease;
+}
+
+.group:hover .project-accent-line {
+  opacity: 1;
+}

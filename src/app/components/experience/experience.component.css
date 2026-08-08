@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+.section-divider-line {
+  @apply absolute top-0 left-0 right-0 h-px;
+  background: linear-gradient(to right, transparent, rgba(51, 65, 85, 0.5), transparent);
+}
+
+.timeline-line {
+  @apply absolute left-4 md:left-8 top-0 bottom-0 w-px;
+  background: linear-gradient(to bottom, #6366f1, rgba(99, 102, 241, 0.5), transparent);
+}
+
+.timeline-dot {
+  @apply absolute left-2.5 md:left-6 top-1 w-3.5 h-3.5 rounded-full transition-all duration-300;
+  border-width: 3px;
+}
+
+.timeline-dot-active {
+  @apply bg-brand-500 border-brand-400;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5);
+}
+
+.timeline-dot-inactive {
+  @apply bg-surface-700 border-surface-600;
+}
+
+.experience-card {
+  transition: all 0.5s ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.05);
+  transform: translateY(-4px);
+}
+
+.current-badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-emerald-400 text-xs font-semibold;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}

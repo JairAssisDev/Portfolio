@@ -1,0 +1,68 @@
+<section id="projetos" class="relative">
+  <!-- Section divider -->
+  <div class="section-divider-line"></div>
+
+  <div class="section-container">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-brand-400 font-mono text-sm font-semibold tracking-wider uppercase mb-3">Pesquisa Aplicada</span>
+      <h2 class="section-title">Projetos de <span class="gradient-text">Pesquisa</span></h2>
+      <p class="section-subtitle mt-3">Soluções acadêmicas</p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+      @for (project of projects; track project.title) {
+        <div class="glass-card overflow-hidden group project-card">
+          <!-- Card Header with gradient -->
+          <div class="relative p-6 pb-4">
+            <div class="flex items-start gap-4">
+              <!-- Icon -->
+              <div class="project-icon"
+                   [class]="project.gradient">
+                {{ project.icon }}
+              </div>
+              <div>
+                <span class="project-institution-badge">
+                  {{ project.institution }}
+                </span>
+                <h3 class="text-xl font-bold text-white leading-tight group-hover:text-brand-300 transition-colors duration-300">
+                  {{ project.title }}
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="px-6 pb-6">
+            <p class="text-surface-400 mb-5">{{ project.description }}</p>
+
+            <!-- Details -->
+            <ul class="space-y-2.5 mb-6">
+              @for (detail of project.details; track detail) {
+                <li class="flex items-start gap-3 text-surface-300 text-sm">
+                  <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>{{ detail }}</span>
+                </li>
+              }
+            </ul>
+
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-2">
+              @for (tech of project.technologies; track tech) {
+                <span class="badge text-xs">{{ tech }}</span>
+              }
+            </div>
+          </div>
+
+          <!-- Bottom accent line -->
+          <div class="project-accent-line"
+               [class]="project.gradient"></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
