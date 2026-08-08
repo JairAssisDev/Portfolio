@@ -29,10 +29,9 @@
 }
 
 .project-accent-line {
-  @apply h-1;
-  opacity: 0.6;
-  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
-  transition: opacity 0.5s ease;
+  @apply h-1.5 w-full;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .group:hover .project-accent-line {

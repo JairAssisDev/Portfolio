@@ -2,26 +2,26 @@
   display: block;
 }
 
-.hero-orb {
+.about-orb {
   @apply absolute rounded-full;
   width: 24rem;
   height: 24rem;
   filter: blur(48px);
 }
 
-.hero-orb-left {
+.about-orb-left {
   top: 25%;
   left: -8rem;
   background-color: rgba(79, 70, 229, 0.1);
 }
 
-.hero-orb-right {
+.about-orb-right {
   bottom: 25%;
   right: -8rem;
   background-color: rgba(8, 145, 178, 0.1);
 }
 
-.hero-grid-pattern {
+.about-grid-pattern {
   @apply absolute inset-0;
   opacity: 0.02;
   background-image: radial-gradient(circle, #fff 1px, transparent 1px);
@@ -81,13 +81,6 @@
     width: 1.5rem;
     height: 1.5rem;
   }
-}
-
-.availability-badge {
-  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6;
-  background-color: rgba(30, 27, 75, 0.5);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  color: #a5b4fc;
 }
 
 .highlight-pill {
