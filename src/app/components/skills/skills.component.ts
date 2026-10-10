@@ -25,7 +25,7 @@ export class SkillsComponent {
       title: 'Infraestrutura & Nuvem',
       icon: '☁️',
       gradient: 'from-cyan-500 to-blue-600',
-      skills: ['Docker', 'Linux', 'Edge Computing', 'Integrações Multicloud'],
+      skills: ['Docker', 'Linux', 'Edge Computing', 'Integrações Multicloud', 'AWS Lambda', 'Amazon Web Services', 'Arquitetura em Nuvem'],
     },
     {
       title: 'Bancos de Dados',

@@ -15,7 +15,7 @@
       <!-- Timeline Line -->
       <div class="timeline-line"></div>
 
-      @for (exp of experiences; track exp.company; let i = $index) {
+      @for (exp of experiences; track $index; let i = $index) {
         <div class="relative pl-12 md:pl-20 pb-16 last:pb-0 group">
           <!-- Timeline Dot -->
           <div class="timeline-dot"

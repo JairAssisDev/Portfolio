@@ -17,6 +17,7 @@ export class NavbarComponent {
     { label: 'Experiência', href: '#experiencia' },
     { label: 'Projetos', href: '#projetos' },
     { label: 'Habilidades', href: '#habilidades' },
+    { label: 'Certificações', href: '#certificacoes' },
     { label: 'Contato', href: '#contato' },
   ];
 

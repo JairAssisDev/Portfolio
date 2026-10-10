@@ -1,0 +1,51 @@
+<section id="certificacoes" class="relative">
+  <!-- Section divider -->
+  <div class="section-divider-line"></div>
+
+  <!-- Background Effects -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="certifications-bg-orb"></div>
+  </div>
+
+  <div class="section-container relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-brand-400 font-mono text-sm font-semibold tracking-wider uppercase mb-3">Certificações</span>
+      <h2 class="section-title">Credenciais <span class="gradient-text">Profissionais</span></h2>
+      <p class="section-subtitle mt-3">Minhas certificações e treinamentos</p>
+    </div>
+
+    <!-- Certifications Grid -->
+    <div class="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+      @for (cert of certifications; track cert.name) {
+        <div class="glass-card p-6 certification-card group flex flex-col items-center justify-center min-h-[200px] w-full sm:w-[350px]">
+          <!-- Certification Image -->
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 flex-shrink-0">
+            <img
+              [src]="'assets/' + cert.image"
+              [alt]="cert.name"
+              class="w-full h-full object-cover rounded-xl"
+              loading="lazy"
+            />
+            @if (!cert.image) {
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-cyan-600 flex items-center justify-center text-xl font-bold">
+                <span class="text-white">{{ cert.name.charAt(0) }}</span>
+              </div>
+            }
+          </div>
+
+          <!-- Certification Details -->
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-white mb-1">{{ cert.name }}</h3>
+            <p class="text-surface-400 text-sm">{{ cert.issuer }}</p>
+          </div>
+
+          <!-- Year -->
+          <div class="text-center mt-2">
+            <span class="text-brand-400 font-medium text-sm">{{ cert.year }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
